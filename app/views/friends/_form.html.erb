@@ -1,0 +1,97 @@
+<%= form_for(friend) do |f| %>
+  <% if friend.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
+
+      <ul>
+      <% friend.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :code %>
+    <%= f.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :link %>
+    <%= f.text_field :link %>
+  </div>
+
+  <div class="field">
+    <%= f.label :aka %>
+    <%= f.text_field :aka %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vip %>
+    <%= f.check_box :vip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fps %>
+    <%= f.text_field :fps %>
+  </div>
+
+  <div class="field">
+    <%= f.label :floors %>
+    <%= f.number_field :floors %>
+  </div>
+
+  <div class="field">
+    <%= f.label :daily %>
+    <%= f.check_box :daily %>
+  </div>
+
+  <div class="field">
+    <%= f.label :active %>
+    <%= f.text_field :active %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rebuild %>
+    <%= f.number_field :rebuild %>
+  </div>
+
+  <div class="field">
+    <%= f.label :requests %>
+    <%= f.text_field :requests %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time %>
+    <%= f.datetime_select :time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :notes %>
+    <%= f.text_area :notes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :index %>
+    <%= f.text_field :index %>
+  </div>
+
+  <div class="field">
+    <%= f.label :show %>
+    <%= f.text_field :show %>
+  </div>
+
+  <div class="field">
+    <%= f.label :new %>
+    <%= f.text_field :new %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
