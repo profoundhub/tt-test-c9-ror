@@ -1,3 +1,4 @@
+
 <%= form_for(friend) do |f| %>
   <% if friend.errors.any? %>
     <div id="error_explanation">
@@ -11,88 +12,97 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :name, class: "control-label", for: "focusedInput" %>
+<form class="form-horizontal">
+  <fieldset>
+    
+  <div class="field form-group">
+    <%= f.label :name, class: "control-label col-lg-2 ", for: "focusedInput" %>
     <%= f.text_field :name, class: "control-label" %>
   </div>
   
 
-  <div class="field">
-    <%= f.label :code %>
-    <%= f.text_field :code %>
+  <div class="field form-group">
+    <%= f.label :code, class: "control-label col-lg-2 " %>
+    <%= f.text_field :code, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :link %>
-    <%= f.text_field :link %>
+  <div class="field form-group">
+    <%= f.label :link, class: "control-label col-lg-2 " %>
+    <%= f.text_field :link, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :aka %>
-    <%= f.text_field :aka %>
+  <div class="field form-group">
+    <%= f.label :aka, class: "control-label col-lg-2 " %>
+    <%= f.text_field :aka, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :vip %>
-    <%= f.check_box :vip %>
+  <div class="field form-group">
+    <%= f.label :vip, class: "control-label col-lg-2 " %>
+    <%= f.check_box :vip, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :fps %>
-    <%= f.text_field :fps %>
+  <div class="field form-group">
+    <%= f.label :fps, class: "control-label col-lg-2 " %>
+    <%= f.text_field :fps, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :floors %>
-    <%= f.number_field :floors %>
+  <div class="field form-group">
+    <%= f.label :floors, class: "control-label col-lg-2 " %>
+    <%= f.number_field :floors, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :daily %>
-    <%= f.check_box :daily %>
+  <div class="field form-group">
+    <%= f.label :daily, class: "control-label col-lg-2 " %>
+    <%= f.check_box :daily, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :active %>
-    <%= f.text_field :active %>
+  <div class="field form-group">
+    <%= f.label :active, class: "control-label col-lg-2 " %>
+    <%= f.text_field :active, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :rebuild %>
-    <%= f.number_field :rebuild %>
+  <div class="field form-group">
+    <%= f.label :rebuild, class: "control-label col-lg-2 " %>
+    <%= f.number_field :rebuild, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :requests %>
-    <%= f.text_field :requests %>
+  <div class="field form-group">
+    <%= f.label :requests, class: "control-label col-lg-2 " %>
+    <%= f.text_field :requests, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :time %>
-    <%= f.datetime_select :time %>
+  <div class="field form-group">
+    <%= f.label :time, class: "control-label col-lg-2 " %>
+    <%= f.datetime_select :time, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :notes %>
-    <%= f.text_area :notes %>
+  <div class="field form-group">
+    <%= f.label :notes, class: "control-label col-lg-2 " %>
+    <%= f.text_area :notes, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :index %>
-    <%= f.text_field :index %>
+  <div class="field form-group">
+    <%= f.label :index, class: "control-label col-lg-2 " %>
+    <%= f.text_field :index, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :show %>
-    <%= f.text_field :show %>
+  <div class="field form-group">
+    <%= f.label :show, class: "control-label col-lg-2 " %>
+    <%= f.text_field :show, class: "control-label" %>
   </div>
 
-  <div class="field">
-    <%= f.label :new %>
-    <%= f.text_field :new %>
+  <div class="field form-group">
+    <%= f.label :new, class: "control-label col-lg-2 " %>
+    <%= f.text_field :new, class: "control-label" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div class="actions form-group">
+  <%= f.submit 'Add Friend Profile', class: 'btn btn-success'  %>
+</div>
+
+
+
+  </fieldset>
+</form>
+
 <% end %>
