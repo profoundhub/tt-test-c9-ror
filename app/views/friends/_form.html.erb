@@ -11,10 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name, class: "control-label", for: "focusedInput" %>
+    <%= f.text_field :name, class: "control-label" %>
   </div>
+  
 
   <div class="field">
     <%= f.label :code %>
