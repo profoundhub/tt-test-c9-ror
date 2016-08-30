@@ -8,7 +8,6 @@
       <tr>
         <th>Name</th>
         <th>Code</th>
-        <th>Link</th>
         <th>Aka</th>
         <th>Vip</th>
         <th>Fps</th>
@@ -17,9 +16,10 @@
         <th>Active</th>
         <th>Rebuild</th>
         <th>Requests</th>
-        <th>Time</th>
+        
         <th>Notes</th>
-
+        <th>Time</th>
+        
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -29,7 +29,6 @@
         <tr>
           <td><%= friend.name %></td>
           <td><%= friend.code %></td>
-          <td><%= friend.link %></td>
           <td><%= friend.aka %></td>
           <td><%= friend.vip %></td>
           <td><%= friend.fps %></td>
@@ -38,12 +37,13 @@
           <td><%= friend.active %></td>
           <td><%= friend.rebuild %></td>
           <td><%= friend.requests %></td>
-          <td><%= friend.time %></td>
           <td><%= friend.notes %></td>
+          <td><%= friend.time %></td>
+          
 
-          <td><%= link_to 'Show', friend %></td>
-          <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
-          <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Show', friend, class: "btn btn-primary" %></td>
+          <td><%= link_to 'Edit', edit_friend_path(friend), class: "btn btn-warning" %></td>
+          <td><%= link_to 'Delete', friend, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
@@ -53,5 +53,5 @@
   <hr>
   <br>
 
-  <button type="button" class="btn btn-default"><%= link_to 'New Friend', new_friend_path %></button>
+  <%= link_to 'New Friend', new_friend_path,class: "btn btn-success" %>
 </div>
