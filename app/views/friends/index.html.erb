@@ -37,9 +37,6 @@
           <td><%= friend.requests %></td>
           <td><%= friend.time %></td>
 
-          <td><%= link_to 'Show', friend, class: "btn btn-primary" %></td>
-          <td><%= link_to 'Edit', edit_friend_path(friend), class: "btn btn-warning" %></td>
-          <td><%= link_to 'Delete', friend, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
